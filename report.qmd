@@ -1,0 +1,19 @@
+---
+title: "Report"
+format: html
+---
+
+
+```{r}
+
+library(ggplot2)
+
+clean_dat = read.csv('clean_penguins.csv')
+
+ggplot(clean_dat, aes(x = bill_depth_mm, y = body_mass_g, color = species)) +
+    geom_point() +
+    geom_smooth()
+
+
+```
+
